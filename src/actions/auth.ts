@@ -1,8 +1,8 @@
 'use server';
 
 import { z } from "zod";
-import { signIn, signOut } from "@/auth";
 import { AuthError } from "next-auth";
+import { signIn, signOut } from "@/auth";
 import { NextAuthLoginSchema } from '@/schema';
 
 export async function loginAction(value: z.infer<typeof NextAuthLoginSchema>) {
